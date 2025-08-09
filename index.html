@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nagasurya Randhi — AI/ML Researcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Nagasurya Randhi — AI/ML researcher focusing on Federated Learning, Continual Learning, and Computer Vision." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6ee7b7; --glass:rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#071024 0%, #071428 100%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1060px;margin:0 auto;padding:36px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+    .logo{font-weight:700;letter-spacing:0.2px}
+    nav a{margin-left:18px;color:var(--muted);font-weight:600}
+    .hero{display:flex;gap:28px;align-items:center}
+    .hero-left{flex:1}
+    h1{font-size:36px;margin:0 0 8px}
+    .tagline{color:var(--accent);font-weight:700;margin-bottom:12px}
+    .subtitle{color:var(--muted);max-width:62ch;line-height:1.5}
+    .cta{margin-top:18px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:var(--accent);cursor:pointer;margin-right:10px}
+    .hero-right{width:260px;background:var(--glass);border-radius:14px;padding:16px;backdrop-filter:blur(6px);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .card-title{font-weight:700;margin:0 0 8px}
+    .meta{color:var(--muted);font-size:13px}
+    section{margin-top:28px}
+    .grid{display:grid;gap:18px}
+    .two{grid-template-columns:1fr 360px}
+    .info-card{background:var(--card);padding:18px;border-radius:12px}
+    .timeline{list-style:none;padding:0;margin:0}
+    .timeline li{margin-bottom:12px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .pill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--muted);font-size:13px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .proj{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;min-height:160px;display:flex;flex-direction:column}
+    .proj h3{margin:0 0 8px}
+    .proj p{color:var(--muted);font-size:14px;flex:1}
+    .tags{margin-top:12px}
+    .link-row{display:flex;gap:8px;align-items:center}
+    footer{margin-top:42px;padding:20px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);text-align:center}
+    .toggle{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:8px;color:var(--muted);cursor:pointer}
+    @media (max-width:880px){.two{grid-template-columns:1fr}
+      .hero{flex-direction:column}
+      .hero-right{width:100%}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Nagasurya Randhi</div>
+      <div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#awards">Awards</a>
+          <a href="#contact">Contact</a>
+          <a href="Nagasurya_Resume.pdf" download class="btn">Download Resume</a>
+          <button class="toggle" id="toggle">Toggle Theme</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Rest of the sections remain unchanged -->
+
+    <footer>
+      Built with ❤️ · Hosted on GitHub Pages · © Nagasurya Randhi
+    </footer>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    toggle.addEventListener('click', ()=>{
+      document.body.classList.toggle('light-mode');
+      if(document.body.classList.contains('light-mode')){
+        document.body.style.background = '#f7fbff';
+        document.body.style.color = '#091026';
+      } else {
+        document.body.style.background = 'linear-gradient(180deg,#071024 0%, #071428 100%)';
+        document.body.style.color = '#e6eef6';
+      }
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    });
+  </script>
+</body>
+</html>
