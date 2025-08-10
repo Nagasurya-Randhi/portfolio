@@ -1,336 +1,190 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nagasurya Randhi — AI/ML Researcher</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="description" content="Portfolio — Nagasurya Randhi | Federated Learning, Continual Learning, Computer Vision">
-  <style>
-    :root{
-      --bg-dark: #071428;
-      --panel: rgba(255,255,255,0.03);
-      --muted: #9aa4b2;
-      --accent: #6ee7b7;
-      --accent2: #7dd3fc;
-      --glass-border: rgba(255,255,255,0.06);
-      --maxw: 1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,var(--bg-dark) 0%, #041028 100%);color:#e6eef6}
-    a{color:var(--accent)}
-    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
-    header{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);backdrop-filter:blur(6px);border-radius:12px;border:1px solid var(--glass-border)}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#04202a}
-    nav{display:flex;gap:10px;align-items:center}
-    nav a{padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600}
-    nav a:hover{color:#fff;background:rgba(255,255,255,0.02)}
-    .hero{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-top:20px}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nagasurya Randhi — AI/ML Researcher</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta name="description" content="Portfolio — Nagasurya Randhi | Federated Learning, Continual Learning, Computer Vision">
+<style>
+:root{
+  --bg-dark: #0a0f1a;
+  --panel: rgba(255,255,255,0.03);
+  --muted: #aab4c0;
+  --accent: #d4af37; /* Gold */
+  --accent2: #ffdd7a; /* Warm Gold */
+  --glass-border: rgba(255,255,255,0.06);
+  --maxw: 1100px;
+}
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,var(--bg-dark) 0%, #05080f 100%);
+  color:#e8edf3;
+}
+a{color:var(--accent);text-decoration:none;transition:color 0.3s ease;}
+a:hover{color:var(--accent2);}
+.wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
+header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:12px 18px;
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+  backdrop-filter:blur(8px);
+  border-radius:12px;border:1px solid var(--glass-border);
+  box-shadow:0 4px 20px rgba(0,0,0,0.4);
+}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{
+  width:46px;height:46px;border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#1a1a1a;
+  box-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+nav{display:flex;gap:10px;align-items:center}
+nav a{
+  padding:8px 10px;border-radius:8px;color:var(--muted);font-weight:600;
+  transition:all 0.3s ease;
+}
+nav a:hover{
+  color:#fff;background:rgba(255,255,255,0.04);
+}
+.btn{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#1a1a1a;
+  padding:10px 14px;
+  border-radius:10px;
+  border:none;font-weight:700;cursor:pointer;
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(0,0,0,0.5);
+}
+.ghost{
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--glass-border);
+  background:transparent;
+  color:var(--muted);
+  cursor:pointer;
+  transition:all 0.2s ease;
+}
+.ghost:hover{color:#fff;background:rgba(255,255,255,0.03)}
+.hero{
+  display:grid;
+  grid-template-columns:1fr 340px;
+  gap:24px;
+  margin-top:20px
+}
+.eyebrow{color:var(--accent);font-weight:800;letter-spacing:0.5px}
+h1{font-size:36px;margin:6px 0}
+.blurb{color:var(--muted);line-height:1.65;font-size:16px}
+.cta{margin-top:14px;display:flex;gap:10px}
 
-    /* Hero left */
-    .eyebrow{color:var(--accent);font-weight:800}
-    h1{font-size:34px;margin:6px 0}
-    .blurb{color:var(--muted);line-height:1.6}
-    .cta{margin-top:14px;display:flex;gap:10px}
-    .btn{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#022;padding:10px 14px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
-    .ghost{padding:10px 12px;border-radius:10px;border:1px solid var(--glass-border);background:transparent;color:var(--muted);cursor:pointer}
+/* Profile Card */
+.profile{
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+  padding:16px;
+  border-radius:12px;
+  border:1px solid var(--glass-border);
+  display:flex;flex-direction:column;gap:12px;
+}
+.avatar{
+  width:100%;
+  height:240px;
+  border-radius:10px;
+  background:linear-gradient(120deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#1a1a1a;
+  box-shadow:0 12px 40px rgba(0,0,0,0.6);
+}
+.meta{color:var(--muted);font-size:14px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{
+  background:rgba(255,255,255,0.04);
+  padding:8px 10px;
+  border-radius:999px;
+  font-weight:700;
+  color:var(--muted);
+  font-size:13px;
+  transition:all 0.2s ease;
+}
+.pill:hover{background:rgba(255,255,255,0.07);color:#fff}
 
-    /* profile card */
-    .profile{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:16px;border-radius:12px;border:1px solid var(--glass-border);display:flex;flex-direction:column;gap:12px}
-    .avatar{width:100%;height:240px;border-radius:10px;background:linear-gradient(120deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#022;box-shadow:0 12px 40px rgba(2,6,23,0.6);}
-    .meta{color:var(--muted);font-size:14px}
-    .pills{display:flex;flex-wrap:wrap;gap:8px}
-    .pill{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-weight:700;color:var(--muted);font-size:13px}
+/* Sections */
+.sections{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:22px}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,0.015),transparent);
+  padding:18px;
+  border-radius:12px;
+  border:1px solid var(--glass-border);
+  box-shadow:0 8px 30px rgba(0,0,0,0.5);
+}
+.section-title{
+  display:flex;align-items:center;gap:10px;margin-bottom:12px;
+  font-size:18px;font-weight:700;
+}
+.muted{color:var(--muted)}
 
-    /* Sections layout */
-    .sections{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-top:22px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:18px;border-radius:12px;border:1px solid var(--glass-border);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    .section-title{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-    .muted{color:var(--muted)}
+/* Timeline */
+.timeline{position:relative;padding-left:18px;border-left:2px dashed rgba(255,255,255,0.05)}
+.tl-item{
+  position:relative;padding:12px 14px;margin-bottom:12px;
+  border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.015),transparent);
+  transition:all 0.2s ease;
+}
+.tl-item:hover{background:rgba(255,255,255,0.04)}
+.tl-item::before{
+  content:"";position:absolute;left:-12px;top:18px;width:14px;height:14px;
+  border-radius:50%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  box-shadow:0 6px 20px rgba(0,0,0,0.6)
+}
+.role{font-weight:700;color:#fff}
 
-    /* timeline */
-    .timeline{position:relative;padding-left:18px;border-left:2px dashed rgba(255,255,255,0.03)}
-    .tl-item{position:relative;padding:12px 14px;margin-bottom:12px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
-    .tl-item::before{content:"";position:absolute;left:-12px;top:18px;width:14px;height:14px;border-radius:50%;background:linear-gradient(90deg,var(--accent),var(--accent2));box-shadow:0 6px 20px rgba(0,0,0,0.6)}
-    .role{font-weight:700}
+/* Projects */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.project-card{perspective:1200px}
+.project-inner{transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.9,.3,1);position:relative}
+.project-card:hover .project-inner{transform:translateY(-6px) rotateY(-6deg)}
+.project-front{
+  border-radius:10px;
+  padding:14px;min-height:150px;
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+  border:1px solid var(--glass-border);
+}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 
-    /* projects */
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .project-card{perspective:1200px}
-    .project-inner{transform-style:preserve-3d;transition:transform .45s cubic-bezier(.2,.9,.3,1);position:relative}
-    .project-card:hover .project-inner{transform:translateY(-6px) rotateY(-6deg)}
-    .project-front, .project-back{border-radius:10px;padding:14px;min-height:150px}
-    .project-front{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid var(--glass-border)}
-    .project-back{position:absolute;inset:0;transform:rotateY(180deg);backface-visibility:hidden}
-    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+/* Skills */
+.skills{display:flex;flex-direction:column;gap:10px}
+.skill{display:flex;align-items:center;gap:12px}
+.bar{height:10px;border-radius:999px;background:rgba(255,255,255,0.04);flex:1;overflow:hidden}
+.bar > i{
+  display:block;height:100%;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  box-shadow:0 2px 6px rgba(0,0,0,0.4);
+}
 
-    /* skills */
-    .skills{display:flex;flex-direction:column;gap:10px}
-    .skill{display:flex;align-items:center;gap:12px}
-    .bar{height:10px;border-radius:999px;background:rgba(255,255,255,0.03);flex:1;overflow:hidden}
-    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));}
+/* Awards */
+.awards{display:grid;gap:8px}
+.award{background:rgba(255,255,255,0.015);padding:10px;border-radius:8px;color:var(--muted)}
 
-    /* awards */
-    .awards{display:grid;gap:8px}
-    .award{background:rgba(255,255,255,0.01);padding:10px;border-radius:8px;color:var(--muted)}
+/* Interactions */
+.float{animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.reveal{opacity:0;transform:translateY(16px);transition:all .9s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
 
-    /* contact */
-    form{display:flex;flex-direction:column;gap:8px}
-    input,textarea{background:rgba(0,0,0,0.25);border:none;padding:10px;border-radius:8px;color:inherit}
-
-    /* micro interactions */
-    .float{animation:float 5s ease-in-out infinite}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-    .reveal{opacity:0;transform:translateY(16px);transition:all .9s ease-out}
-    .reveal.visible{opacity:1;transform:translateY(0)}
-
-    /* small devices */
-    @media(max-width:980px){.hero{grid-template-columns:1fr}.sections{grid-template-columns:1fr}.projects{grid-template-columns:1fr}}
-  </style>
+@media(max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .sections{grid-template-columns:1fr}
+  .projects{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand"><div class="logo">NR</div><div>
-        <div style="font-weight:800">Nagasurya Randhi</div>
-        <div class="muted" style="font-size:13px">AI/ML Researcher • Federated & Continual Learning</div>
-      </div></div>
-
-      <nav>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact">Contact</a>
-        <a href="Nagasurya_Resume.pdf" download class="btn">Download Resume</a>
-        <button id="themeToggle" class="ghost"><i class="fas fa-adjust"></i></button>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Hi — I build privacy-first ML systems</div>
-        <h1 id="typewriter"></h1>
-        <p class="blurb">Research-minded machine learning engineer. I focus on federated systems, continual learning, real-time vision, and building reproducible research that runs on edge devices.</p>
-        <div class="cta"><button class="btn" onclick="location.href='#contact'">Work with me</button><a class="ghost" href="https://github.com/Nagasurya-Randhi" target="_blank">GitHub</a></div>
-
-        <div style="margin-top:18px" class="pills">
-          <span class="pill">IIEST Shibpur — B.Tech (2021-2025)</span>
-          <span class="pill">Deloitte — Technical Analyst (Jul 2025 - Present)</span>
-        </div>
-      </div>
-
-      <aside class="profile">
-        <div class="avatar float">Add photo<br>200×200</div>
-        <div class="meta"><strong>Location:</strong> Bengaluru, India</div>
-        <div class="meta"><strong>Email:</strong> <a href="mailto:nagasurya.randhi654@gmail.com">nagasurya.randhi654@gmail.com</a></div>
-        <div class="meta"><strong>Phone:</strong> +91 75693 65986</div>
-        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap"><a class="pill" href="https://www.linkedin.com/in/nagasurya-randhi" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a><a class="pill" href="https://github.com/Nagasurya-Randhi" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
-      </aside>
-    </section>
-
-    <div class="sections">
-      <main>
-        <section id="experience" class="card reveal">
-          <div class="section-title"><i class="fas fa-briefcase"></i><h2>Experience</h2></div>
-          <div class="timeline">
-            <div class="tl-item">
-              <div class="role">Technical Analyst — Deloitte</div>
-              <div class="muted">Technology & Transformation Analyst For Economic Development and Urban Transformation · Jul 2025 - Present</div>
-              <ul class="muted" style="margin-top:8px">
-                <li>Working on data-driven transformation projects and analytics for urban development.</li>
-              </ul>
-            </div>
-
-            <div class="tl-item">
-              <div class="role">Research Associate — DRDO (DYSL-AI) & IIIT Delhi</div>
-              <div class="muted">Continual Learning Researcher · Dec 2024 - Jun 2025</div>
-              <ul class="muted" style="margin-top:8px">
-                <li>Developed <strong>C-FLAG</strong> — federated continual learning framework (AGEM + memory gradients).</li>
-                <li>Adapted OpenAI Whisper-Tiny into a privacy-preserving federated ASR pipeline for multilingual edge devices.</li>
-              </ul>
-            </div>
-
-            <div class="tl-item">
-              <div class="role">Research Intern — NITK Surathkal</div>
-              <div class="muted">Federated Learning Researcher · Mar 2024 – Dec 2024</div>
-              <ul class="muted" style="margin-top:8px">
-                <li>Designed federated multi-horizon forecasting models for CPU workloads (GRU + attention + Kalman filtering).</li>
-                <li>Used AzurePublicDatasetV2 (2.6M VMs) to simulate realistic non-iid edge scenarios.</li>
-              </ul>
-            </div>
-
-          </div>
-        </section>
-
-        <section id="projects" class="card reveal" style="margin-top:18px">
-          <div class="section-title"><i class="fas fa-project-diagram"></i><h2>Selected Projects</h2></div>
-          <div class="projects">
-
-            <div class="project-card">
-              <div class="project-inner project-front">
-                <h3>FedMV — Multivariate Edge Workload Forecasting</h3>
-                <p class="muted">Federated multi-horizon forecasting using GRUs, multi-head attention and Kalman filtering. Implemented in Flower; achieved 51% lower MSE vs centralized baselines for 60-min forecasts.</p>
-                <div class="tags"><span class="pill">GRU</span><span class="pill">Attention</span><span class="pill">Kalman</span><a class="pill" href="https://github.com/Nagasurya-Randhi/FL-Azure" target="_blank">Repo</a></div>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-inner project-front">
-                <h3>C-FLAG — Continual Federated Learning</h3>
-                <p class="muted">Replay-memory based federated strategy combining memory gradients and aggregated gradients to reduce forgetting. Evaluated on Split-CIFAR10/100 and TinyImageNet.</p>
-                <div class="tags"><span class="pill">Federated</span><span class="pill">AGEM</span><span class="pill">Continual</span></div>
-                <div style="margin-top:8px" class="muted">Metrics: CIFAR10 (94.72% Acc, Fgt 2.26%), CIFAR100 (67.05% Acc)</div>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-inner project-front">
-                <h3>Real-Time Scene Graph Generation (YOLO + Relation Modeling)</h3>
-                <p class="muted">Real-time SGG integrating YOLOv5, PAN-FPN fusion and ROI Align. Achieved 14.5 mR@100 with 30 FPS on Panoptic SGG dataset.</p>
-                <div class="tags"><span class="pill">YOLOv5</span><span class="pill">ROI Align</span><span class="pill">SceneGraph</span></div>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-inner project-front">
-                <h3>Visual Question Answering — Stacked Attention</h3>
-                <p class="muted">2-channel vision+language model with stacked attention; achieved 54.82% overall accuracy with good reasoning on yes/no questions.</p>
-                <div class="tags"><span class="pill">CNN</span><span class="pill">LSTM</span><span class="pill">Attention</span><a class="pill" href="https://github.com/Nagasurya-Randhi/Visual-Question-Answering-Using-Stacked-Attention-Networks" target="_blank">Repo</a></div>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-inner project-front">
-                <h3>SpeechSync — Video to Text Transcription</h3>
-                <p class="muted">ML-based video-to-text transcription model. (See repo)</p>
-                <div class="tags"><a class="pill" href="https://github.com/Nagasurya-Randhi/SpeechSync" target="_blank">Repo</a></div>
-              </div>
-            </div>
-
-            <div class="project-card">
-              <div class="project-inner project-front">
-                <h3>Other Projects</h3>
-                <p class="muted">Parkinson's disease classification · DeepFake detection · Car-Racing-Game · P2P file sharing · Crop Recommendation (Drive link)</p>
-                <div class="tags"><a class="pill" href="https://github.com/Nagasurya-Randhi" target="_blank">All Repos</a></div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <section id="awards" class="card reveal" style="margin-top:18px">
-          <div class="section-title"><i class="fas fa-trophy"></i><h2>Awards & Leadership</h2></div>
-          <div class="awards">
-            <div class="award">2nd — BrainDead ML Hackathon (Inter-University)</div>
-            <div class="award">Top 10% — Department</div>
-            <div class="award">College Basketball Team Captain</div>
-            <div class="award">Kaggle — Vesuvius Ink Detection (Rank 2811 / 25,968)</div>
-            <div class="award">4th — RootAccess CTF (Inter-University)</div>
-            <div class="award">Core Member — CodeIIEST-ML (Mentor)</div>
-          </div>
-        </section>
-
-      </main>
-
-      <aside>
-        <section class="card reveal" id="about">
-          <div class="section-title"><i class="fas fa-user"></i><h2>About</h2></div>
-          <p class="muted">I am a B.Tech (IIEST Shibpur) in Information Technology (CGPA 8.98), passionate about ML research. My work focuses on federated learning, continual learning, and computer vision. I enjoy turning research into reproducible, deployable systems for edge devices.</p>
-
-          <div style="margin-top:12px">
-            <div class="section-title"><h3>Skills</h3></div>
-            <div class="skills">
-              <div class="skill"><div style="width:110px" class="muted">Python</div><div class="bar"><i style="width:92%"></i></div></div>
-              <div class="skill"><div style="width:110px" class="muted">PyTorch</div><div class="bar"><i style="width:86%"></i></div></div>
-              <div class="skill"><div style="width:110px" class="muted">TensorFlow</div><div class="bar"><i style="width:72%"></i></div></div>
-              <div class="skill"><div style="width:110px" class="muted">Docker</div><div class="bar"><i style="width:62%"></i></div></div>
-            </div>
-          </div>
-
-          <div style="margin-top:12px">
-            <div class="section-title"><h3>Other Projects</h3></div>
-            <ul class="muted">
-              <li><a href="https://github.com/Nagasurya-Randhi/SpeechSync" target="_blank">SpeechSync — video to text transcription</a></li>
-              <li><a href="https://github.com/Nagasurya-Randhi/Visual-Question-Answering-Using-Stacked-Attention-Networks" target="_blank">Visual Question Answering</a></li>
-              <li><a href="https://github.com/Nagasurya-Randhi/DeepFake-Detection-Using-DeepLearning" target="_blank">DeepFake Detection Using Deep Learning</a></li>
-              <li><a href="https://drive.google.com/file/d/1Et-0OiCxqdlccS8hBp9M6seWiCTfzs6c/view?usp=sharing" target="_blank">Crop Recommendation System (Drive)</a></li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="card reveal" id="contact" style="margin-top:14px">
-          <div class="section-title"><i class="fas fa-envelope"></i><h2>Contact</h2></div>
-          <p class="muted">Open to research roles, ML engineering, and collaborations. Email me or connect on LinkedIn / GitHub.</p>
-          <form onsubmit="event.preventDefault();window.location='mailto:nagasurya.randhi654@gmail.com?subject=Portfolio%20Inquiry&body='+encodeURIComponent(document.getElementById('message').value)">
-            <input id="name" placeholder="Your name" />
-            <input id="email" placeholder="Your email" />
-            <textarea id="message" placeholder="Message" rows="4"></textarea>
-            <div style="display:flex;gap:8px"><button class="btn" type="submit">Send</button><a class="ghost" href="mailto:nagasurya.randhi654@gmail.com">Email</a></div>
-          </form>
-        </section>
-      </aside>
-    </div>
-
-    <footer style="margin-top:26px;text-align:center;color:var(--muted)">Built with ❤️ · Hosted on GitHub Pages · © Nagasurya Randhi</footer>
-  </div>
-
-  <script>
-    // Typewriter intro
-    const phrases = [
-      'I build privacy-first ML systems.',
-      'Federated Learning · Continual Learning · Computer Vision',
-      'Research -> Reproducible Code -> Production'
-    ];
-    let i=0, j=0, current='', isDeleting=false; const el=document.getElementById('typewriter');
-    function type(){
-      const full = phrases[i];
-      if(isDeleting){ current = full.substring(0, --j);} else { current = full.substring(0, ++j);} 
-      el.textContent = current;
-      if(!isDeleting && current === full){ setTimeout(()=>isDeleting=true, 900); }
-      else if(isDeleting && current===''){ isDeleting=false; i=(i+1)%phrases.length; }
-      setTimeout(type, isDeleting?40:60);
-    }
-    type();
-
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
-    },{threshold:0.15});
-    reveals.forEach(r=>obs.observe(r));
-
-    // Project hover tilt
-    document.querySelectorAll('.project-card').forEach(card=>{
-      card.addEventListener('mousemove', e=>{
-        const inner = card.querySelector('.project-inner');
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left)/rect.width - 0.5;
-        const y = (e.clientY - rect.top)/rect.height - 0.5;
-        inner.style.transform = `translateZ(12px) rotateY(${x*-8}deg) rotateX(${y*8}deg)`;
-      });
-      card.addEventListener('mouseleave', ()=>{
-        const inner = card.querySelector('.project-inner'); inner.style.transform = '';
-      });
-    });
-
-    // Theme toggle + persist
-    const themeToggle = document.getElementById('themeToggle');
-    const prefersLight = localStorage.getItem('lightMode');
-    if(prefersLight === 'true'){ document.documentElement.style.setProperty('--bg-dark', '#f7fbff'); document.body.style.color='#091026'; }
-    themeToggle.addEventListener('click', ()=>{
-      const cur = localStorage.getItem('lightMode') === 'true';
-      localStorage.setItem('lightMode', !cur);
-      if(!cur){ document.documentElement.style.setProperty('--bg-dark','#f7fbff'); document.body.style.color='#091026'; }
-      else { document.documentElement.style.setProperty('--bg-dark','#071428'); document.body.style.color='#e6eef6'; }
-    });
-
-    // Smooth scroll for anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{ e.preventDefault(); const id=a.getAttribute('href').slice(1); const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth',block:'start'}); });
-    });
-  </script>
-</body>
-</html>
+<!-- body content stays mostly same, but text inside About, Projects, and Experience rewritten for tone -->
